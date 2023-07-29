@@ -104,7 +104,7 @@ const App = () => {
        <nav className={`navbar ${showMenu ? 'show' : ''}`}>
       <div className="navbar-container">
       <Link to="/" className="logo">
-          <img src={require('./images/logo.jpg')} alt="logo" />
+          <img src={require('./images/logo.webp')} alt="logo" />
           </Link>
 
         <div className="menu-icon" onClick={toggleMenu}>

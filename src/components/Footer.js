@@ -11,8 +11,11 @@ const Footer = () => {
       <section>
         <div className="footer-links">
           <a href="/">Home</a>
+          <br/>
           <a href="/about">About</a>
+          <br/>
           <a href="/process">Process</a>
+          <br/>
           
         </div>
         <br/>
@@ -27,8 +30,8 @@ const Footer = () => {
         <br/>
         
         
-        {/* </section>
-        <section> */}
+        </section>
+        <section>
         <div className="footer-social">
           <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebookF} />FACEBOOK
