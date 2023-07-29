@@ -7,6 +7,7 @@ import AdminSignUp from './components/AdminSignUp';
 import StudentSignUp from './components/StudentSignUp';
 import AdminSignIn from './components/AdminSignIn';
 import StudentSignIn from './components/StudentSignIn';
+import StudentPage from './components/StudentPage';
 import SignInPopup from './components/SignInPopup'; // Import the SignInPopup component
 import SignUpPopup from './components/SignUpPopup';
 import About from './components/About'; // Import the About component
@@ -134,6 +135,9 @@ const App = () => {
         <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/admin" component={AdminPage} />
+          <Route path="/internship">
+            <StudentPage />
+          </Route>
           <Route exact path="/admin/signup" component={AdminSignUp}>
             <AdminSignUp handleAdminSignup={handleAdminSignup} adminSignupData={adminSignupData} setAdminSignupData={setAdminSignupData} />
           </Route>
