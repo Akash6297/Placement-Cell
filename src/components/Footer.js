@@ -25,34 +25,36 @@ const Footer = () => {
         <div className="footer-contact">
           <p>Contact us:<br/> contact@example.com</p>
           {/* Add more contact information as needed */}
-        </div>
         <br/>
         
+       
         
-        </section>
-        <section>
+        
+        {/* </section>
+        <section> */}
         <div className="footer-social">
-          <h3><a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebookF} />
           </a>
-          </h3>
+        
 
         {/* </div>
         <div> */}
-        <h3>
+       
           <a href="https://twitter.com/yourtwitterpage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          </h3>
+          
           {/* </div>
           <div> */}
-          <h3>
+         
           <a href="https://www.instagram.com/yourinstagrampage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          </h3>
+         
           
           {/* Add more social media icons and links as needed */}
+        </div>
         </div>
         </section>
       </div>
