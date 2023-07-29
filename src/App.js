@@ -8,7 +8,6 @@ import StudentSignUp from './components/StudentSignUp';
 import AdminSignIn from './components/AdminSignIn';
 import StudentSignIn from './components/StudentSignIn';
 import StudentPage from './components/StudentPage';
-// import SignInPopup from './components/SignInPopup';
 import SignUpPopup from './components/SignUpPopup';
 import About from './components/About';
 import Process from './components/Process';
@@ -17,7 +16,7 @@ import './styles.css';
 import './css/navbar.css';
 
 const App = () => {
-  // const [showSignInPopup, setShowSignInPopup] = useState(false);
+ 
   const [showSignUpPopup, setShowSignUpPopup] = useState(false);
   const [adminSignupData, setAdminSignupData] = useState({ secretKey: '', name: '', email: '', password: '', retypePassword: '' });
   const [studentSignupData, setStudentSignupData] = useState({ rollNumber: '', name: '', email: '', password: '', retypePassword: '' });
@@ -207,7 +206,6 @@ const handleApproveRequest = async (requestId) => {
         </div>
       </nav>
 
-      {/* {showSignInPopup && <SignInPopup onClose={() => setShowSignInPopup(false)} />} */}
       {showSignUpPopup && <SignUpPopup onClose={() => setShowSignUpPopup(false)} />}
 
       <div className="container">
