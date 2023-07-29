@@ -1,21 +1,39 @@
-import React from 'react';
-import '../styles.css'; // Import the styles.css file
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const AdminPage = () => {
+  const [requests, setRequests] = useState([]);
+
+  useEffect(() => {
+    // Fetch all request documents from the "request" collection
+    const fetchRequests = async () => {
+      try {
+        const response = await axios.get('https://placement-p2k8.onrender.com/api/request');
+        setRequests(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchRequests();
+  }, []);
+
   return (
     <div>
-      {/* Navbar */}
-      <nav>
+      <h2>Admin Page</h2>
+      {/* Display the list of requests */}
+      {requests.length > 0 ? (
         <ul>
-          <li><a href="./HomePage">Home</a></li>
-          {/* You can add more navigation links here */}
+          {requests.map((request) => (
+            <li key={request._id}>
+              {/* Display the details of each request */}
+              Name: {request.name}, Email: {request.email}, Roll Number: {request.rollNumber}
+            </li>
+          ))}
         </ul>
-      </nav>
-
-      <div className="container">
-        <h1>Welcome, Admin!</h1>
-        {/* Add content for the admin page */}
-      </div>
+      ) : (
+        <p>No requests found.</p>
+      )}
     </div>
   );
 };
