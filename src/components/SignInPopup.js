@@ -19,10 +19,10 @@ const SignInPopup = ({ onClose }) => {
         <h2>Sign In</h2>
         <div className="signin-options">
           <Link to="/student/signin">
-            <button onClick={handleStudentSignIn}>Sign up as STUDENT</button>
+            <button onClick={handleStudentSignIn}>Sign in as STUDENT</button>
           </Link>
           <Link to="/admin/signin">
-            <button onClick={handleAdminSignIn}>Sign up as ADMIN</button>
+            <button onClick={handleAdminSignIn}>Sign in as ADMIN</button>
           </Link>
 
         </div>
