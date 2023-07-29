@@ -15,12 +15,17 @@ const Footer = () => {
           <a href="/process">Process</a>
           
         </div>
+        <br/>
+        <br/>
+       
+        </section>
+        <section>
         <div className="footer-contact">
           <p>Contact us: contact@example.com</p>
           {/* Add more contact information as needed */}
         </div>
-        </section>
-        <section>
+        <br/>
+        
         
         {/* </section>
         <section> */}
@@ -28,14 +33,17 @@ const Footer = () => {
           <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebookF} />FACEBOOK
           </a>
-          <br />
+        </div>
+        <div>
           <a href="https://twitter.com/yourtwitterpage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} />TWITTER
           </a>
-          <br />
+          </div>
+          <div>
           <a href="https://www.instagram.com/yourinstagrampage" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />INSTAGRAM
           </a>
+          
           {/* Add more social media icons and links as needed */}
         </div>
         </section>
