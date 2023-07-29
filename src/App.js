@@ -28,7 +28,7 @@ const App = () => {
   const handleAdminSignup = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/signup', adminSignupData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/signup', adminSignupData);
       console.log(response.data);
       // Move to the sign-in page after successful admin sign-up
     } catch (error) {
@@ -39,7 +39,7 @@ const App = () => {
   const handleStudentSignup = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/student/signup', studentSignupData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/student/signup', studentSignupData);
       console.log(response.data);
       setStudentSignupMessage('Wait for Admin Approval');
     } catch (error) {
@@ -50,7 +50,7 @@ const App = () => {
   const handleAdminSignin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/signin', adminSigninData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/signin', adminSigninData);
       console.log(response.data);
       // Move to the Admin page after successful admin sign-in
     } catch (error) {
@@ -61,7 +61,7 @@ const App = () => {
   const handleStudentSignin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/student/signin', studentSigninData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/student/signin', studentSigninData);
       console.log(response.data);
       // Move to the Student page after successful student sign-in
     } catch (error) {
@@ -104,7 +104,7 @@ const App = () => {
        <nav className={`navbar ${showMenu ? 'show' : ''}`}>
       <div className="navbar-container">
       <Link to="/" className="logo">
-          <img src={require('./images/B5.jpg')} alt="logo" />
+          <img src={require('./images/logo.jpg')} alt="logo" />
           </Link>
 
         <div className="menu-icon" onClick={toggleMenu}>

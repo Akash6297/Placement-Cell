@@ -14,7 +14,7 @@ const About = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/contact', formData);
       console.log(response.data);
       setSubmitMessage('Your message has been submitted. We will get back to you soon.');
     } catch (error) {
