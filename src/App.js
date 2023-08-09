@@ -7,8 +7,8 @@ import AdminSignUp from './components/AdminSignUp';
 import StudentSignUp from './components/StudentSignUp';
 import AdminSignIn from './components/AdminSignIn';
 import StudentSignIn from './components/StudentSignIn';
-import StudentPage from './components/StudentPage';
 import SignUpPopup from './components/SignUpPopup';
+import Internship from './components/Internship';
 import About from './components/About';
 import Process from './components/Process';
 import Footer from './components/Footer';
@@ -174,29 +174,29 @@ const handleApproveRequest = async (requestId) => {
             </li>
             <li>
               <Link to="/about" onClick={closeMenu}>
-                <i className="fas fa-info-circle"></i>About
+                <i className="fas fa-info-circle"></i> About
               </Link>
             </li>
             <li>
               <Link to="/process" onClick={closeMenu}>
-                <i className="fas fa-cogs"></i>Process
+                <i className="fas fa-cogs"></i> Process
+              </Link>
+            </li>
+            <li>
+              <Link to="/internship" onClick={closeMenu}>
+              <i class="fa fa-briefcase" aria-hidden="true"></i> Internship
               </Link>
             </li>
             <li>
             <Link to="/student/signin">
-            <i className="fas fa-user-plus"></i>STUDENT
+            <i class="fa fa-user-circle" aria-hidden="true"></i> STUDENT
           </Link>
             </li>
             <li>
             <Link to="/admin/signin">
-            <i className="fas fa-info-circle"></i>ADMIN
+            <i class="fa fa-address-book" aria-hidden="true"></i> ADMIN
           </Link>
             </li>
-            {/* <li onClick={() => setShowSignInPopup(true)}>
-              <Link to="/signin">
-                <i className="fas fa-sign-in-alt"></i> SIGN-IN
-              </Link>
-            </li> */}
             <li onClick={() => setShowSignUpPopup(true)}>
               <Link to="/signup">
                 <i className="fas fa-user-plus"></i> SIGN-UP
@@ -218,7 +218,8 @@ const handleApproveRequest = async (requestId) => {
               handleDenyRequest={handleDenyRequest}
             />
           </Route>
-          <Route exact path="/internship" component={StudentPage} />
+          
+          <Route path="/internship" component={Internship} />
           <Route exact path="/admin/signup">
             <AdminSignUp
               handleAdminSignup={handleAdminSignup}
