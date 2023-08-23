@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import '../css/about.css'; // Import the CSS file for the about page styles
-import Image1 from '../images/a.png';
+import Image1 from '../images/Akash.png';
 import Image2 from '../images/Shweta.png';
 import Image3 from '../images/Rupak.png';
 import Image4 from '../images/Gobindo.png';
