@@ -5,8 +5,12 @@ import Image1 from '../images/Akash.png';
 import Image2 from '../images/Shweta.png';
 import Image3 from '../images/Rupak.png';
 import Image4 from '../images/Gobindo.png';
-import Image5 from '../images/a.png';
-import Image6 from '../images/a.png';
+import Image5 from '../images/Akash.png';
+import Image6 from '../images/Akash.png';
+import Image7 from '../images/Akash.png';
+import Image8 from '../images/Akash.png';
+import Image9 from '../images/Akash.png';
+import Image10 from '../images/Akash.png';
 const About = () => {
   return (
     <div>
@@ -78,7 +82,7 @@ const About = () => {
           </div>
         </div>
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image7} alt="Image of the Person" />
           <div className="creator-info">
             <p>Souvik Ghosh</p>
             <p>Software Developer</p>
@@ -88,7 +92,7 @@ const About = () => {
           </div>
         </div>
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image8} alt="Image of the Person" />
           <div className="creator-info">
             <p>Shourdha Patihar</p>
             <p>Software Developer</p>
@@ -98,7 +102,7 @@ const About = () => {
           </div>
         </div>
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image9} alt="Image of the Person" />
           <div className="creator-info">
             <p>Arbaz Ansary</p>
             <p>Software Developer</p>
@@ -118,7 +122,7 @@ const About = () => {
           </div>
         </div>
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image10} alt="Image of the Person" />
           <div className="creator-info">
             <p>Akash Mandal</p>
             <p>Software Developer</p>
