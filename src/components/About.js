@@ -8,7 +8,7 @@ import Image4 from '../images/Gobindo.png';
 import Image5 from '../images/Akash.png';
 import Image6 from '../images/Joydeep.jpg';
 import Image7 from '../images/Souvik.jpg';
-import Image8 from '../images/Akash.png';
+import Image8 from '../images/Shourdha.jpg';
 import Image9 from '../images/Akash.png';
 import Image10 from '../images/Akash.png';
 const About = () => {
