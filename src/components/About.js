@@ -58,7 +58,8 @@
 
 import React from 'react';
 import '../css/about.css'; // Import the CSS file for the about page styles
-import Image from '../images/a.png';
+import Image1 from '../images/a.png';
+import Image2 from '../images/Shweta.png';
 const About = () => {
   return (
     <div>
@@ -80,7 +81,7 @@ const About = () => {
       <div className="creator-section">
         
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image1} alt="Image of the Person" />
           <div className="creator-info">
             <p>Akash Mandal</p>
             <p>Software Developer</p>
@@ -90,7 +91,7 @@ const About = () => {
           </div>
         </div>
         <div className="creator">
-          <img src={Image} alt="Image of the Person" />
+          <img src={Image2} alt="Image of the Person" />
           <div className="creator-info">
             <p>Shweta Paramanik</p>
             <p>Software Developer</p>
