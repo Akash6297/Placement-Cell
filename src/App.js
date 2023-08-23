@@ -158,7 +158,7 @@ const handleApproveRequest = async (requestId) => {
       <nav className={`navbar ${showMenu ? 'show' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="logo">
-            <img src={require('./images/logo.webp')} alt="logo" />
+            <img src={require('./images/logo.jpg')} alt="logo" />
           </Link>
 
           <div className="menu-icon" onClick={toggleMenu}>
@@ -177,7 +177,7 @@ const handleApproveRequest = async (requestId) => {
                 <i className="fas fa-info-circle"></i> About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/process" onClick={closeMenu}>
                 <i className="fas fa-cogs"></i> Process
               </Link>
@@ -186,7 +186,7 @@ const handleApproveRequest = async (requestId) => {
               <Link to="/internship" onClick={closeMenu}>
               <i class="fa fa-briefcase" aria-hidden="true"></i> Internship
               </Link>
-            </li>
+            </li> */}
             <li>
             <Link to="/student/signin">
             <i class="fa fa-user-circle" aria-hidden="true"></i> STUDENT

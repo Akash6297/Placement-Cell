@@ -2,16 +2,14 @@
 
   body {
     font-family: Arial, sans-serif;
-    background: url('images/bg.webp') ;
-    /* background-image: url('./images/bg.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; */
     margin: 0;
     padding: 0;
     color: #ffffff; 
-    box-shadow: inset 0 0 0 2000px rgba(0, 110, 255, 0.3);
+    /* box-shadow: inset 0 0 0 2000px rgba(0, 110, 255, 0.3); */
   }
   
   
@@ -21,11 +19,11 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 60vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #ffffff; /* Blue heading color */
+    color: #05b0ff; /* Blue heading color */
   }
   
   h1 {
