@@ -4,7 +4,7 @@ import '../css/about.css'; // Import the CSS file for the about page styles
 import Image1 from '../images/Akash.png';
 import Image2 from '../images/Shweta.png';
 import Image3 from '../images/Rupak.png';
-import Image4 from '../images/Gobindo.png';
+import Image4 from '../images/Gobinda.jpg';
 import Image5 from '../images/Akash.png';
 import Image6 from '../images/Joydeep.jpg';
 import Image7 from '../images/Souvik.jpg';
