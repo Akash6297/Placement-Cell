@@ -94,10 +94,10 @@ const About = () => {
         <div className="creator">
           <img src={Image8} alt="Image of the Person" />
           <div className="creator-info">
-            <p>Shourdha Patihar</p>
+            <p>Sauhardya Patihar</p>
             <p>Software Developer</p>
             <p>Dept: ECE</p>
-            <p>Roll No: 35000320032</p>
+            <p>Roll No: 35000320027</p>
             <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
           </div>
         </div>
