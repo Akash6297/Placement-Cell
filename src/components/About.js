@@ -6,8 +6,8 @@ import Image2 from '../images/Shweta.png';
 import Image3 from '../images/Rupak.png';
 import Image4 from '../images/Gobindo.png';
 import Image5 from '../images/Akash.png';
-import Image6 from '../images/Akash.png';
-import Image7 from '../images/Akash.png';
+import Image6 from '../images/Joydeep.jpg';
+import Image7 from '../images/Souvik.jpg';
 import Image8 from '../images/Akash.png';
 import Image9 from '../images/Akash.png';
 import Image10 from '../images/Akash.png';
@@ -74,7 +74,7 @@ const About = () => {
         <div className="creator">
           <img src={Image6} alt="Image of the Person" />
           <div className="creator-info">
-            <p>Joydeep Das</p>
+            <p>JOYDEEP DAS</p>
             <p>Software Developer</p>
             <p>Dept: ECE</p>
             <p>Roll No: 35000320020</p>
@@ -87,7 +87,7 @@ const About = () => {
             <p>Souvik Ghosh</p>
             <p>Software Developer</p>
             <p>Dept: ECE</p>
-            <p>Roll No: 35000320032</p>
+            <p>Roll No: 35001620059</p>
             <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
           </div>
         </div>
