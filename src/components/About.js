@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import '../css/about.css'; // Import the CSS file for the about page styles
-import Image1 from '../images/Akash.png';
+import Image1 from '../images/webp/Akash.webp';
 import Image2 from '../images/webp/Shweta.webp';
 import Image3 from '../images/webp/Rupak.webp';
 import Image4 from '../images/webp/Gobinda.webp';
-import Image5 from '../images/Akash.png';
+import Image5 from '../images/webp/Akash.webp';
 import Image6 from '../images/webp/Joydeep.webp';
 import Image7 from '../images/webp/Souvik.webp';
 import Image8 from '../images/webp/Shourdha.webp';
-import Image9 from '../images/Akash.png';
-import Image10 from '../images/Akash.png';
+import Image9 from '../images/webp/Akash.webp';
+import Image10 from '../images/webp/Akash.webp';
 const About = () => {
   return (
     <div>
