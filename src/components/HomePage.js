@@ -3,8 +3,10 @@
 
 import React from 'react';
 import '../css/Home.css'; // Import the styles.css file
-import Image1 from '../images/1.jpeg'; // Import your image file
+import Image4 from '../images/4.jpg'; // Import your image file
+import Image1 from '../images/3.jpg'; // Import your image file
 import Image2 from '../images/2.jpeg'; // Import your image file
+import Image3 from '../images/1.jpeg'; // Import your image file
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import { Carousel } from 'react-responsive-carousel'; 
 const HomePage = () => {
@@ -17,6 +19,12 @@ const HomePage = () => {
         </div>
         <div>
           <img src={Image2} alt="Image Description 1" />
+        </div>
+        <div>
+          <img src={Image3} alt="Image Description 1" />
+        </div>
+        <div>
+          <img src={Image4} alt="Image Description 1" />
         </div>
         
         {/* Add more images here */}
