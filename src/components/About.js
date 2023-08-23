@@ -76,16 +76,94 @@ const About = () => {
         </p>
       </div>
       <hr /> {/* Horizontal Line */}
+      <center><h2>CREATED/MAINTAINED BY</h2></center>
       <div className="creator-section">
-        <h2>CREATED/MAINTAINED BY</h2>
+        
         <div className="creator">
           <img src={Image} alt="Image of the Person" />
           <div className="creator-info">
             <p>Akash Mandal</p>
             <p>Software Developer</p>
-            <a href="portfolio-link">His / Her Portfolio Link</a>
+            <p>DEPT: ECE</p>
+            <p>ROLL NO: 35000320032</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
           </div>
         </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Shweta Paramanik</p>
+            <p>Software Developer</p>
+            <p>DEPT: CSE</p>
+            <p>ROLL NO: 35000120046</p>
+            <a href="https://sites.google.com/view/shwetapramanik">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Sayandip Dutta</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Gobindo </p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Joydeep Das</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Souvik Ghosh</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Shourdha Patihar</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Arbaz Ansary</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Rupak Choudhury</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image} alt="Image of the Person" />
+          <div className="creator-info">
+            <p>Akash Mandal</p>
+            <p>Software Developer</p>
+            <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
+          </div>
+        </div>
+        
       </div>
     </div>
   );
