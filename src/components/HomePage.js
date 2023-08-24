@@ -42,9 +42,9 @@ const HomePage = () => {
           </ul>
         </div>
         
-        
-        <div className="contact-us">
         <center><h2>Contact Us</h2></center>
+        <div className="contact-us">
+        
           <form>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
