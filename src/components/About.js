@@ -5,7 +5,7 @@ import Image1 from '../images/webp/Akash.webp';
 import Image2 from '../images/webp/Shweta.webp';
 import Image3 from '../images/webp/Rupak.webp';
 import Image4 from '../images/webp/Gobinda.webp';
-import Image5 from '../images/webp/Akash.webp';
+import Image5 from '../images/Anirbar.png';
 import Image6 from '../images/webp/Joydeep.webp';
 import Image7 from '../images/webp/Souvik.jpg';
 import Image8 from '../images/webp/Shourdha.webp';
@@ -94,31 +94,31 @@ const About = () => {
         <div className="creator">
           <img src={Image7} alt="Shweta Paramanik" />
           <div className="creator-info">
-            <p>Shweta Paramanik</p>
+            <p>Souvik Ghosh</p>
             <p>Software Developer</p>
             <p>Dept: CSE</p>
-            <p>Roll No: 35000120046</p>
+            <p>Roll No: 35001620059</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
         <div className="creator">
           <img src={Image8} alt="Shweta Paramanik" />
           <div className="creator-info">
-            <p>Shweta Paramanik</p>
+            <p>Soudhaya Patihar</p>
             <p>Software Developer</p>
             <p>Dept: CSE</p>
-            <p>Roll No: 35000120046</p>
+            <p>Roll No: 35000320027</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
         <div className="creator">
           <img src={Image9} alt="Shweta Paramanik" />
           <div className="creator-info">
-            <p>Shweta Paramanik</p>
+            <p>Raju Gorain</p>
             <p>Software Developer</p>
             <p>Dept: CSE</p>
-            <p>Roll No: 35000120046</p>
-            <a href="https://sites.google.com/view/shwetapramanik">More</a>
+            <p>Roll No: 35000720009</p>
+            <a href="https://rajugorain.github.io/PORTFOLIO/">More</a>
           </div>
         </div>
         {/* Add more team members here */}
