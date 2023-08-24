@@ -20,7 +20,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://placement-p2k8.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
