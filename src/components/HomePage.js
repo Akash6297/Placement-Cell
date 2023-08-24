@@ -13,18 +13,10 @@ import { Carousel } from 'react-responsive-carousel';
 const HomePage = () => {
 
 
-    const text = "WELCOME TO RKMGEC PLACEMENT WEBSITE";
-  
-    // Split the text into an array of characters
-    const textArray = text.split('');
   return (
     <div className="container">
       <h1>
-        {textArray.map((char, index) => (
-          <span key={index} className="typing-animation">
-            {char}
-          </span>
-        ))}
+        WELCOME TO RKMGEC PLACEMENT WEBSITE
       </h1>
       <Carousel autoPlay infiniteLoop showThumbs={false}>
         <div>
