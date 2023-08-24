@@ -31,6 +31,7 @@ const About = () => {
       <hr /> {/* Horizontal Line */}
       <h2>Created/Maintained By </h2>
       <div className="creator-section">
+      <div className="creator-pair">
         <div className="creator">
           <img src={Image1} alt="Akash Mandal" />
           <div className="creator-info">
@@ -41,6 +42,7 @@ const About = () => {
             <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
           </div>
         </div>
+        <hr/>
         <div className="creator">
           <img src={Image2} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -51,6 +53,9 @@ const About = () => {
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
+        </div>
+        <hr/>
+        <div className="creator-pair">
         <div className="creator">
           <img src={Image3} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -61,6 +66,7 @@ const About = () => {
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
+        <hr/>
         <div className="creator">
           <img src={Image4} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -71,6 +77,9 @@ const About = () => {
             <a href="http://ekchokho.com">More</a>
           </div>
         </div>
+        </div>
+        <hr/>
+        <div className="creator-pair">
         <div className="creator">
           <img src={Image5} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -81,6 +90,7 @@ const About = () => {
             <a href="h">More</a>
           </div>
         </div>
+        <hr/>
         <div className="creator">
           <img src={Image6} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -91,6 +101,9 @@ const About = () => {
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
+        </div>
+        <hr/>
+        <div className="creator-pair">
         <div className="creator">
           <img src={Image7} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -101,6 +114,7 @@ const About = () => {
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
+        <hr/>
         <div className="creator">
           <img src={Image8} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -111,6 +125,9 @@ const About = () => {
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
         </div>
+        </div>
+        <hr/>
+        <div className="creator-pair">
         <div className="creator">
           <img src={Image9} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -121,6 +138,7 @@ const About = () => {
             <a href="https://rajugorain.github.io/PORTFOLIO/">More</a>
           </div>
         </div>
+        <hr/>
         <div className="creator">
           <img src={Image10} alt="Shweta Paramanik" />
           <div className="creator-info">
@@ -130,6 +148,7 @@ const About = () => {
             <p>Roll No: 35000320030</p>
             <a href="https://arbazportfolio.netlify.app">More</a>
           </div>
+        </div>
         </div>
         {/* Add more team members here */}
       </div>
