@@ -9,7 +9,7 @@ import Image5 from '../images/Anirbar.png';
 import Image6 from '../images/webp/Joydeep.webp';
 import Image7 from '../images/webp/Souvik.jpg';
 import Image8 from '../images/webp/Shourdha.webp';
-import Image9 from '../images/webp/Akash.webp';
+import Image9 from '../images/Raju.jpg';
 // import Image10 from '../images/webp/Akash.webp';
 
 const About = () => {
@@ -35,7 +35,7 @@ const About = () => {
           <img src={Image1} alt="Akash Mandal" />
           <div className="creator-info">
             <p>Akash Mandal</p>
-            <p>Software Developer</p>
+            <p>FullStack Developer</p>
             <p>Dept: ECE</p>
             <p>Roll No: 35000320032</p>
             <a href="https://akash6297.github.io/Akash-Mandal/">More</a>
@@ -115,7 +115,7 @@ const About = () => {
           <img src={Image9} alt="Shweta Paramanik" />
           <div className="creator-info">
             <p>Raju Gorain</p>
-            <p>Software Developer</p>
+            <p>Web Developer</p>
             <p>Dept: CSE</p>
             <p>Roll No: 35000720009</p>
             <a href="https://rajugorain.github.io/PORTFOLIO/">More</a>
