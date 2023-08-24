@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../css/Contact.css';
 function AdminSignUp() {
   const [formData, setFormData] = useState({
     name: '',
@@ -41,9 +41,9 @@ function AdminSignUp() {
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h2>Admin Sign Up</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-group">
         <input
           type="text"
           name="name"
