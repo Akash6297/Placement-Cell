@@ -12,16 +12,18 @@
   }
   
   .popup-content {
-    background-image: url(../images/2.jpeg);
+    background-image: url(../images/Logo.png);
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
+    max-width: 460px;
+    height: 60%;
+    width: 100%;
   }
   
   .popup h2 {
+    padding-top: 110px;
     text-align: center;
     margin-bottom: 20px;
     color: #007bff;
