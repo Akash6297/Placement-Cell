@@ -11,7 +11,7 @@ function StudentSignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/student/register', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/student/register', formData);
       console.log(response.data.message);
      
         alert('Sign Up successfully!');

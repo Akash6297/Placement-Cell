@@ -12,7 +12,7 @@ function StudentSignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/student/login', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/student/login', formData);
       console.log(response.data.message);
       alert('Sign In successfully!');
       history.push('/'); 

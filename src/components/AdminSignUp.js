@@ -13,7 +13,7 @@ function AdminSignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/register', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/register', formData);
       console.log(response.data.message);
       alert('Sign Up successfully!');
       history.push('/');
