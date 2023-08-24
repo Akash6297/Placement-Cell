@@ -100,11 +100,31 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
+.typing-animation {
+  overflow: hidden; /* Hide overflow text */
+  border-right: 2px solid #333; /* Create a typing cursor effect */
+  white-space: nowrap; /* Keep text on a single line */
+  animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with no width */
+  }
+  to {
+    width: 100%; /* End with full width */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Start and end with a transparent cursor */
+  }
+  50% {
+    border-color: #333; /* Blinking cursor color */
+  }
+}
 
 h1 {
   text-align: center;
