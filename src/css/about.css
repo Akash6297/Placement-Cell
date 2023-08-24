@@ -1,69 +1,11 @@
-/* .about-section {
-    margin-bottom: 20px;
-  }
-  
-  .contact-section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .contact-section h3 {
-    margin-top: 0;
-  }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form textarea {
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact-form p {
-    margin-top: 10px;
-    color: #007bff;
-    font-weight: bold;
-  }
-   */
-
-   /* about.css */
-
-/* General Styles */
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   color: #000;
@@ -86,7 +28,6 @@ hr {
   margin: 20px 0;
 }
 
-/* Creator Section Styles */
 .creator-section{
   background-color: orange;
   color: #000;
@@ -114,7 +55,7 @@ hr {
   color: #007bff;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 600px) {
   .container {
     padding: 10px;
@@ -137,4 +78,67 @@ hr {
     margin-right: 0;
     margin-bottom: 10px;
   }
+} */
+
+/* Styles for the about page */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333; /* Text color */
+  background-color: #f9f9f9; /* Background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #333; /* Text color */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555; /* Text color */
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Creator Section Styles */
+.creator-section {
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.creator img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.creator-info p {
+  font-weight: bold;
+  margin: 0;
+  color: #fff; /* Text color */
+}
+
+.creator-info a {
+  text-decoration: none;
+  color: #ffeb3b; /* Link color */
+}
+
+.creator-info a:hover {
+  text-decoration: underline;
 }

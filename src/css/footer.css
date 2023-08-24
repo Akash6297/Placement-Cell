@@ -31,8 +31,11 @@
 .footer-contact p {
   margin: 0;
   font-size: 16px;
+  color: gainsboro;
 }
-
+.footer-bottom p{
+  color: gainsboro;
+}
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
