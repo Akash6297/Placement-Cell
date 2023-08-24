@@ -36,9 +36,9 @@ const HomePage = () => {
         <div className="notice-board">
           
           <ul>
-            <li>Important Announcement 1</li>
-            <li>Important Announcement 2</li>
-            <li>Important Announcement 3</li>
+            <li>New Announcement 1</li>
+            <li>New Announcement 2</li>
+            <li>New Announcement 3</li>
           </ul>
         </div>
         
