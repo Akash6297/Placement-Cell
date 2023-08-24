@@ -1,4 +1,4 @@
-/* Styles for the footer */
+     /* Styles for the footer */
 .footer {
   margin-top: auto; /* Push the footer to the bottom */
   background-color: #333;
@@ -6,81 +6,61 @@
   padding: 20px;
   text-align: center;
 }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .footer-links a:last-child {
-    margin-right: 0;
-  }
-  
-  .footer-contact p {
-    margin: 0;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #ffffff;
-  }
-  
-section{
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* Styles for the contact form */
-.contact-form {
-    margin-top: 20px;
-    
-  }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form textarea {
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact-form p {
-    margin-top: 10px;
-    color: #0f1010;
-    font-weight: bold;
-  }
-  
-    
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #007bff; /* Hover color */
+}
+
+.footer-links .footer-link:last-child {
+  margin-right: 0;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ffffff;
+  font-size: 14px;
+}
+
+/* Styles for the social media icons */
+.social-icon {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Hover color */
+}
+
+/* Additional styles for your links */
+.footer-link {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
