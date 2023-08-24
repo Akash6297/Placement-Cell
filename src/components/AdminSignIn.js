@@ -1,8 +1,9 @@
 // AdminSignIn.js
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useHistory } from 'react-router-dom'; 
 function AdminSignIn() {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -13,7 +14,8 @@ function AdminSignIn() {
     try {
       const response = await axios.post('http://localhost:5000/api/admin/login', formData);
       console.log(response.data.message);
-      // Handle successful login, e.g., redirect to the admin panel
+      alert('Sign In successfully!');
+      history.push('/'); 
     } catch (error) {
       console.error(error.response.data.message);
     }

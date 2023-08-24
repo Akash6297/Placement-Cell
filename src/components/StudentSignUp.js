@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useHistory } from 'react-router-dom';
 function StudentSignUp() {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -12,7 +13,9 @@ function StudentSignUp() {
     try {
       const response = await axios.post('http://localhost:5000/api/student/register', formData);
       console.log(response.data.message);
-      // Handle successful registration, e.g., redirect to a success page
+     
+        alert('Sign Up successfully!');
+        history.push('/'); 
     } catch (error) {
       console.error(error.response.data.message);
     }

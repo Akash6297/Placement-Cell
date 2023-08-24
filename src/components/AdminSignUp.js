@@ -1,8 +1,9 @@
 // AdminSignUp.js
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useHistory } from 'react-router-dom'; 
 function AdminSignUp() {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -14,8 +15,9 @@ function AdminSignUp() {
     try {
       const response = await axios.post('http://localhost:5000/api/admin/register', formData);
       console.log(response.data.message);
-      // Handle successful registration, e.g., redirect to a success page
-    } catch (error) {
+      alert('Sign Up successfully!');
+      history.push('/');
+     } catch (error) {
       console.error(error.response.data.message);
     }
   };
