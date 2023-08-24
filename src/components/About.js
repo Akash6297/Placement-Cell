@@ -29,7 +29,7 @@ const About = () => {
         </p>
       </div>
       <hr /> {/* Horizontal Line */}
-      <h2>Meet Our Team</h2>
+      <h2>Created/Maintained By </h2>
       <div className="creator-section">
         <div className="creator">
           <img src={Image1} alt="Akash Mandal" />
