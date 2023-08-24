@@ -29,17 +29,22 @@ const HomePage = () => {
         
         {/* Add more images here */}
       </Carousel>
+
+      <center><h2>Notice Board</h2></center>
       <div className="content">
+      
         <div className="notice-board">
-          <h2>Notice Board</h2>
+          
           <ul>
             <li>Important Announcement 1</li>
             <li>Important Announcement 2</li>
             <li>Important Announcement 3</li>
           </ul>
         </div>
+        
+        
         <div className="contact-us">
-          <h2>Contact Us</h2>
+        <center><h2>Contact Us</h2></center>
           <form>
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" required />
