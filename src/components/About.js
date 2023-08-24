@@ -10,7 +10,7 @@ import Image6 from '../images/webp/Joydeep.webp';
 import Image7 from '../images/webp/Souvik.jpg';
 import Image8 from '../images/webp/Shourdha.webp';
 import Image9 from '../images/Raju.jpg';
-// import Image10 from '../images/webp/Akash.webp';
+import Image10 from '../images/Arbaz.png';
 
 const About = () => {
   return (
@@ -56,7 +56,7 @@ const About = () => {
           <div className="creator-info">
             <p>Rupak Choudhury</p>
             <p>Software Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35000320013</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
@@ -76,7 +76,7 @@ const About = () => {
           <div className="creator-info">
             <p>Anirban Chatterjee</p>
             <p>Software Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35000320022</p>
             <a href="h">More</a>
           </div>
@@ -86,7 +86,7 @@ const About = () => {
           <div className="creator-info">
             <p>JOYDEEP DAS</p>
             <p>Software Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35000320020</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
@@ -96,7 +96,7 @@ const About = () => {
           <div className="creator-info">
             <p>Souvik Ghosh</p>
             <p>Software Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35001620059</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
@@ -106,7 +106,7 @@ const About = () => {
           <div className="creator-info">
             <p>Soudhaya Patihar</p>
             <p>Software Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35000320027</p>
             <a href="https://sites.google.com/view/shwetapramanik">More</a>
           </div>
@@ -116,9 +116,19 @@ const About = () => {
           <div className="creator-info">
             <p>Raju Gorain</p>
             <p>Web Developer</p>
-            <p>Dept: CSE</p>
+            <p>Dept: ECE</p>
             <p>Roll No: 35000720009</p>
             <a href="https://rajugorain.github.io/PORTFOLIO/">More</a>
+          </div>
+        </div>
+        <div className="creator">
+          <img src={Image10} alt="Shweta Paramanik" />
+          <div className="creator-info">
+            <p>Arbaz Ansary</p>
+            <p>Web Developer</p>
+            <p>Dept: ECE</p>
+            <p>Roll No: 35000320030</p>
+            <a href="https://arbazportfolio.netlify.app">More</a>
           </div>
         </div>
         {/* Add more team members here */}
