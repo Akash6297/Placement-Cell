@@ -12,6 +12,7 @@
   }
   
   .popup-content {
+    background-image: url(../images/2.jpeg);
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;

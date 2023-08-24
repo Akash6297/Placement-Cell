@@ -1,76 +1,43 @@
 import React, { useState } from 'react';
-import '../css/Contact.css';
+import axios from 'axios';
+
 function StudentSignUp() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    username: '',
     password: '',
   });
 
-  const [error, setError] = useState('');
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch('https://placement-p2k8.onrender.com/api/student/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Handle successful sign-up (e.g., redirect to student dashboard)
-        // You can also set a state variable to show a success message.
-      } else {
-        const data = await response.json();
-        setError(data.message); // Display error message to the user
-      }
+      const response = await axios.post('http://localhost:5000/api/student/register', formData);
+      console.log(response.data.message);
+      // Handle successful registration, e.g., redirect to a success page
     } catch (error) {
-      // Handle network or other errors
+      console.error(error.response.data.message);
     }
   };
 
   return (
     <div className="contact-container">
       <h2>Student Sign Up</h2>
-      <form onSubmit={handleSubmit} className="form-group">
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
+          placeholder="Username"
+          name="username"
+          value={formData.username}
+          onChange={(e) => setFormData({ ...formData, username: e.target.value })}
         />
         <input
           type="password"
-          name="password"
           placeholder="Password"
+          name="password"
           value={formData.password}
-          onChange={handleChange}
-          required
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
         />
         <button type="submit">Sign Up</button>
       </form>
-      {error && <p>{error}</p>}
     </div>
   );
 }
