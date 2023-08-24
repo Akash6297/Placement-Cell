@@ -7,7 +7,7 @@ import Image3 from '../images/webp/Rupak.webp';
 import Image4 from '../images/webp/Gobinda.webp';
 import Image5 from '../images/webp/Akash.webp';
 import Image6 from '../images/webp/Joydeep.webp';
-import Image7 from '../images/webp/Souvik.webp';
+import Image7 from '../images/webp/Souvik.jpg';
 import Image8 from '../images/webp/Shourdha.webp';
 import Image9 from '../images/webp/Akash.webp';
 import Image10 from '../images/webp/Akash.webp';
