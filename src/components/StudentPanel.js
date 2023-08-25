@@ -1,13 +1,26 @@
-// client/src/components/StudentPanel.js
-import React from 'react';
+// AdminPanel.js
 
-function StudentPanel() {
+import React from 'react';
+import '../css/adminpanel.css'
+function AdminPanel() {
   return (
     <div>
-      <h2>Welcome to the Student Panel</h2>
-      {/* Add your student panel content here */}
+    <h1>WELCOME STUDENT</h1>
+    <hr/>
+    <div className="admin-panel">
+       
+      <div className="admin-box">
+        <h3>Internship</h3>
+        {/* Add approval functionality here */}
+      </div>
+      <div className="admin-box">
+        <h3>Edit Your Details</h3>
+        {/* Add internship addition functionality here */}
+      </div>
+     
+    </div>
     </div>
   );
 }
 
-export default StudentPanel;
+export default AdminPanel;
