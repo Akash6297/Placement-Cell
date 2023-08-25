@@ -7,8 +7,8 @@
   background-color: #05b0ff;
   color: #fff;
   padding: 10px 20px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navbar-container {
@@ -18,8 +18,8 @@
 }
 
 .logo img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
