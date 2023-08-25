@@ -15,7 +15,7 @@ function StudentSignUp() {
       console.log(response.data.message);
      
         alert('Sign Up successfully!');
-        history.push('/student/signin'); 
+        history.push('/student/panel'); 
     } catch (error) {
       console.error(error.response.data.message);
     }

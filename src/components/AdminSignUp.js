@@ -17,7 +17,7 @@ function AdminSignUp() {
       const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/register', formData);
       console.log(response.data.message);
       alert('Sign Up successfully!');
-      history.push('/admin/signin');
+      history.push('/admin/panel');
     } catch (error) {
       console.error('Error:', error);
     }
