@@ -19,9 +19,9 @@ const App = () => {
  
   const [showSignUpPopup, setShowSignUpPopup] = useState(false);
 
-  const [studentSignupMessage ] = useState('');
+  const [studentSignupMessage] = useState('');
 
-
+  const [userType, setUserType] = useState(null);
   // const history = useHistory();
 
   const [alertMessage] = useState('');
@@ -45,7 +45,11 @@ const App = () => {
     links.forEach((link) => {
       link.addEventListener('click', handleLinkClick);
     });
-
+    // Check userType in localStorage when the component mounts
+    const storedUserType = localStorage.getItem('userType');
+    if (storedUserType) {
+      setUserType(storedUserType);
+    }
     return () => {
       links.forEach((link) => {
         link.removeEventListener('click', handleLinkClick);
@@ -88,11 +92,25 @@ const App = () => {
             <i class="fa fa-address-book" aria-hidden="true"></i> ADMIN
           </Link>
             </li>
-            <li onClick={() => setShowSignUpPopup(true)}>
-              <Link to="/signup">
-                <i className="fas fa-user-plus"></i> SIGN-UP
-              </Link>
-            </li>
+            {userType === 'admin' ? (
+              <li>
+                <Link to="/admin/panel" onClick={closeMenu}>
+                  <i className="fas fa-tachometer-alt"></i> Admin Panel
+                </Link>
+              </li>
+            ) : userType === 'student' ? (
+              <li>
+                <Link to="/student/panel" onClick={closeMenu}>
+                  <i className="fas fa-user-graduate"></i> Student Panel
+                </Link>
+              </li>
+            ) : (
+              <li onClick={() => setShowSignUpPopup(true)}>
+                <Link to="/signup">
+                  <i className="fas fa-user-plus"></i> SIGN-UP
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </nav>

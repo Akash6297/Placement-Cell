@@ -1,7 +1,8 @@
 // AdminSignIn.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'; 
+import { useHistory } from 'react-router-dom';
+
 function AdminSignIn() {
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -13,10 +14,13 @@ function AdminSignIn() {
     e.preventDefault();
     try {
       const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/login', formData);
-      // const response = await axios.post('http://localhost:5000/api/admin/login', formData);
-      console.log(response.data.message);
+      console.log(response.data.message); // Check the response message
       alert('Sign In successfully!');
-      history.push('/admin/panel'); 
+
+      // Check if this log is printed
+      console.log('Redirecting to /admin/panel');
+      
+      history.push('/admin/panel'); // Ensure that this line is executed
     } catch (error) {
       console.error(error.response.data.message);
     }

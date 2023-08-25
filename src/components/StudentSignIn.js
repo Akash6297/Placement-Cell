@@ -15,7 +15,7 @@ function StudentSignIn() {
       const response = await axios.post('https://placement-p2k8.onrender.com/api/student/login', formData);
       console.log(response.data.message);
       alert('Sign In successfully!');
-      history.push('/'); 
+      history.push('/student/panel'); 
     } catch (error) {
       console.error(error.response.data.message);
     }
