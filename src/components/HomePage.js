@@ -3,6 +3,7 @@
 
 import React   from 'react';
 import Contact from './Contact';
+import Notice from './Notice';
 import '../css/Home.css'; // Import the styles.css file
 import Image4 from '../images/4.jpg'; // Import your image file
 import Image1 from '../images/3.jpg'; // Import your image file
@@ -40,11 +41,7 @@ const HomePage = () => {
       
         <div className="notice-board">
           
-          <ul>
-            <li>New Announcement 1</li>
-            <li>New Announcement 2</li>
-            <li>New Announcement 3</li>
-          </ul>
+          <Notice/>
         </div>
         
         <center><h2>Contact Us</h2></center>
