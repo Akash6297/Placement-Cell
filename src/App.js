@@ -9,6 +9,7 @@ import AdminSignIn from './components/AdminSignIn';
 import StudentSignIn from './components/StudentSignIn';
 import SignUpPopup from './components/SignUpPopup';
 import Internship from './components/Internship';
+import PostNotice from './components/PostNotice';
 import About from './components/About';
 import Process from './components/Process';
 import Footer from './components/Footer';
@@ -129,6 +130,7 @@ const App = () => {
           
           
           <Route path="/internship" component={Internship} />
+          <Route path="/postnotice" component={PostNotice} />
          
               <Route path="/about" component={About} />
               <Route path="/process" component={Process} />
