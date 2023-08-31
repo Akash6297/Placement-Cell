@@ -19,6 +19,8 @@ function AdminPanel() {
       </div>
       <div className="admin-box">
         <h3>Add Notice</h3>
+
+        
         {/* Add notice addition functionality here */}
       </div>
     </div>
