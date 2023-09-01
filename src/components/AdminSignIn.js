@@ -1,50 +1,63 @@
-// AdminSignIn.js
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 function AdminSignIn() {
-  const history = useHistory();
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: '',
+    secretKey: '',
   });
+
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/login', formData);
-      console.log(response.data.message); // Check the response message
-      alert('Sign In successfully!');
+      const response = await fetch('http://localhost:5000/api/auth/admin/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Check if this log is printed
-      console.log('Redirecting to /admin/panel');
-      
-      history.push('/admin/panel'); // Ensure that this line is executed
+      if (response.status === 200) {
+        setMessage('Logged in as Admin');
+      } else if (response.status === 401) {
+        setMessage('Invalid credentials or secret key');
+      } else {
+        const data = await response.json();
+        setMessage(data.message);
+      }
     } catch (error) {
-      console.error(error.response.data.message);
+      console.error(error);
+      setMessage('Error occurred during login');
     }
   };
 
   return (
-    <div className="contact-container">
+    <div>
       <h2>Admin Sign In</h2>
+      {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={formData.username}
-          onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+          type="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
         <input
           type="password"
           placeholder="Password"
-          name="password"
           value={formData.password}
           onChange={(e) => setFormData({ ...formData, password: e.target.value })}
         />
-        <button type="submit">Sign In</button>
+        <input
+          type="text"
+          placeholder="Secret Key"
+          value={formData.secretKey}
+          onChange={(e) => setFormData({ ...formData, secretKey: e.target.value })}
+        />
+        <button type="submit">Login</button>
       </form>
     </div>
   );

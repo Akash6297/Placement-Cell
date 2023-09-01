@@ -1,0 +1,32 @@
+/* Sample CSS for your components */
+/* Add more styling to make it look presentable and responsive */
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

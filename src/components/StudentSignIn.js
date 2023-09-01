@@ -50,9 +50,8 @@
 
 // Signin.js
 import React, { useState } from 'react';
-import axios from 'axios';
-import '../css/student.css';
-const Signin = () => {
+import '../css/from.css';
+function StudentLogin() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -60,58 +59,52 @@ const Signin = () => {
 
   const [message, setMessage] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post('http://localhost:5000/api/students/signin', formData);
+      const response = await fetch('http://localhost:5000/api/auth/student/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
       if (response.status === 200) {
-        setMessage('Signin successful');
-        // Redirect to the student dashboard or another page
+        setMessage('Logged in as Student');
+      } else if (response.status === 401) {
+        setMessage('Wait for Admin Approval');
       } else {
-        setMessage('Signin failed. Please check your credentials.');
+        const data = await response.json();
+        setMessage(data.message);
       }
     } catch (error) {
-      console.error('Signin error:', error);
-      setMessage('Signin failed. Please check your credentials.');
+      console.error(error);
+      setMessage('Error occurred during login');
     }
   };
 
   return (
-    <div className="signin-container">
-      <h2>Student Signin</h2>
-      <form className="signin-form" onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
+    <div>
+      <h2>Student Login</h2>
+      {message && <p>{message}</p>}
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
-          id="email"
-          name="email"
+          placeholder="Email"
           value={formData.email}
-          onChange={handleChange}
-          required
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
-
-        <label htmlFor="password">Password:</label>
         <input
           type="password"
-          id="password"
-          name="password"
+          placeholder="Password"
           value={formData.password}
-          onChange={handleChange}
-          required
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
         />
-
-        <button type="submit">Sign In</button>
+        <button type="submit">Login</button>
       </form>
-
-      {message && <p>{message}</p>}
     </div>
   );
-};
+}
 
-export default Signin;
+export default StudentLogin;

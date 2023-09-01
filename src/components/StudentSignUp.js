@@ -50,72 +50,66 @@
 
 // Signup.js
 import React, { useState } from 'react';
-import axios from 'axios';
-import '../css/student.css';
-const Signup = () => {
+import '../css/from.css';
+function StudentSignup() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    // Add more fields as needed
+    password: '',
   });
 
   const [message, setMessage] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post('http://localhost:5000/api/students/signup', formData);
+      const response = await fetch('http://localhost:5000/api/auth/student/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
       if (response.status === 201) {
         setMessage('Wait for Admin Approval');
-        // Clear form fields
-        setFormData({ name: '', email: '' }); // Add more fields as needed
       } else {
-        setMessage('Signup failed. Please try again.');
+        const data = await response.json();
+        setMessage(data.message);
       }
     } catch (error) {
-      console.error('Signup error:', error);
-      setMessage('Signup failed. Please try again.');
+      console.error(error);
+      setMessage('Error occurred during signup');
     }
   };
 
   return (
-    <div className="signup-container">
+    <div>
       <h2>Student Signup</h2>
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+      {message && <p>{message}</p>}
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          id="name"
-          name="name"
+          placeholder="Name"
           value={formData.name}
-          onChange={handleChange}
-          required
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
-
-        <label htmlFor="email">Email:</label>
         <input
           type="email"
-          id="email"
-          name="email"
+          placeholder="Email"
           value={formData.email}
-          onChange={handleChange}
-          required
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
-
-        {/* Add more form fields as needed */}
-
-        <button type="submit">Sign Up</button>
+        <input
+          type="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+        />
+        <button type="submit">Signup</button>
       </form>
-
-      {message && <p>{message}</p>}
     </div>
   );
-};
+}
 
-export default Signup;
+export default StudentSignup;
