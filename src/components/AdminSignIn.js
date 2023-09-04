@@ -1,66 +1,78 @@
-import React, { useState } from 'react';
+// src/components/AdminSignin.js
 
-function AdminSignIn() {
+import React, { useState } from 'react';
+import axios from 'axios'; // Import axios for making HTTP requests
+import '../css/signup.css';
+import { useHistory } from 'react-router-dom';
+
+const AdminSignin = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     secretKey: '',
   });
-
-  const [message, setMessage] = useState('');
+  const history = useHistory();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/admin/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.status === 200) {
-        setMessage('Logged in as Admin');
-      } else if (response.status === 401) {
-        setMessage('Invalid credentials or secret key');
-      } else {
-        const data = await response.json();
-        setMessage(data.message);
-      }
+      // Send the form data to the server for admin sign-in here
+      // You should make an HTTP POST request to your backend API endpoint
+      const response = await axios.post('http://localhost:5000/api/admin/signin', formData);
+      console.log('Admin sign-in successful:', response.data);
+      history.push('/admin/panel');
+      // You can handle the response as needed, such as redirecting to a dashboard
     } catch (error) {
-      console.error(error);
-      setMessage('Error occurred during login');
+      console.error('Admin sign-in error:', error);
+      // Handle sign-in errors, such as displaying an error message to the user
     }
   };
 
   return (
-    <div>
-      <h2>Admin Sign In</h2>
-      {message && <p>{message}</p>}
+    <div className="signup-container">
+      <h2>Admin Signin</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Secret Key"
-          value={formData.secretKey}
-          onChange={(e) => setFormData({ ...formData, secretKey: e.target.value })}
-        />
-        <button type="submit">Login</button>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="secretKey">Secret Key</label>
+          <input
+            type="text"
+            id="secretKey"
+            name="secretKey"
+            value={formData.secretKey}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Sign In</button>
       </form>
     </div>
   );
-}
+};
 
-export default AdminSignIn;
+export default AdminSignin;

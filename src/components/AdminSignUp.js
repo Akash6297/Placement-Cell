@@ -1,135 +1,95 @@
-// // AdminSignUp.js
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import { useHistory } from 'react-router-dom';
-
-// function AdminSignUp() {
-//   const history = useHistory();
-//   const [formData, setFormData] = useState({
-//     username: '',
-//     password: '',
-//     secretKey: '',
-//   });
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/register', formData);
-//       console.log(response.data.message);
-//       alert('Sign Up successfully!');
-//       history.push('/admin/panel');
-//     } catch (error) {
-//       console.error('Error:', error);
-//     }
-//   };
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   return (
-//     <div className="contact-container">
-//       <h2>Admin Sign Up</h2>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Username"
-//           name="username"
-//           value={formData.username}
-//           onChange={handleInputChange}
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           name="password"
-//           value={formData.password}
-//           onChange={handleInputChange}
-//         />
-//         <input
-//           type="text"
-//           placeholder="Secret Key"
-//           name="secretKey"
-//           value={formData.secretKey}
-//           onChange={handleInputChange}
-//         />
-//         <button type="submit">Sign Up</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default AdminSignUp;
-
+// src/components/AdminSignup.js
 
 import React, { useState } from 'react';
-import '../css/from.css';
-function AdminSignup() {
+import axios from 'axios'; // Import axios for making HTTP requests
+import '../css/signup.css';
+import { useHistory } from 'react-router-dom';
+
+const AdminSignup = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
     secretKey: '',
   });
+  const [successMessage, setSuccessMessage] = useState('');
+  const history = useHistory();
 
-  const [message, setMessage] = useState('');
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/admin/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.status === 201) {
-        setMessage('Signup Successfully');
-      } else {
-        const data = await response.json();
-        setMessage(data.message);
-      }
+      // Send the form data to the server for admin registration here
+      // You should make an HTTP POST request to your backend API endpoint
+      const response = await axios.post('http://localhost:5000/api/admin/signup', formData);
+      console.log('Admin registration successful:', response.data);
+      setSuccessMessage('Successfully Signed Up');
+      // Redirect to the admin sign-in page
+      history.push('/admin/signin');
+      // You can handle the response as needed, such as redirecting to a login page
     } catch (error) {
-      console.error(error);
-      setMessage('Error occurred during signup');
+      console.error('Admin registration error:', error);
+      // Handle registration errors, such as displaying an error message to the user
     }
   };
 
   return (
-    <div>
-      <h2>Admin Signup</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
+    <div className="signup-container">
+    <h2>Admin Signup</h2>
+    {successMessage && <div className="success-message">{successMessage}</div>}
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="name">Name</label>
         <input
           type="text"
-          placeholder="Name"
+          id="name"
+          name="name"
           value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          onChange={handleChange}
+          required
         />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
         <input
           type="email"
-          placeholder="Email"
+          id="email"
+          name="email"
           value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          onChange={handleChange}
+          required
         />
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">Password</label>
         <input
           type="password"
-          placeholder="Password"
+          id="password"
+          name="password"
           value={formData.password}
-          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+          onChange={handleChange}
+          required
         />
+      </div>
+      <div className="form-group">
+        <label htmlFor="secretKey">Secret Key</label>
         <input
           type="text"
-          placeholder="Secret Key"
+          id="secretKey"
+          name="secretKey"
           value={formData.secretKey}
-          onChange={(e) => setFormData({ ...formData, secretKey: e.target.value })}
+          onChange={handleChange}
+          required
         />
-        <button type="submit">Signup</button>
-      </form>
-    </div>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
   );
-}
+};
 
 export default AdminSignup;
