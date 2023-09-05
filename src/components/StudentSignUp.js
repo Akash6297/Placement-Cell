@@ -22,7 +22,7 @@ const StudentSignup = () => {
     try {
       // Send the form data to the server for student registration here
       // You should make an HTTP POST request to your backend API endpoint
-      const response = await axios.post('http://localhost:5000/api/student/signup', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/student/signup', formData);
       console.log('Student registration successful:', response.data);
       setSuccessMessage('Successfully Signed Up');
       history.push('/student/signin');

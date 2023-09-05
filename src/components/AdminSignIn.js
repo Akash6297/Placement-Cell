@@ -22,7 +22,7 @@ const AdminSignin = () => {
     try {
       // Send the form data to the server for admin sign-in here
       // You should make an HTTP POST request to your backend API endpoint
-      const response = await axios.post('http://localhost:5000/api/admin/signin', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/signin', formData);
       console.log('Admin sign-in successful:', response.data);
       history.push('/admin/panel');
       // You can handle the response as needed, such as redirecting to a dashboard

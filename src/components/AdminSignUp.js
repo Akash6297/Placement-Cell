@@ -25,7 +25,7 @@ const AdminSignup = () => {
     try {
       // Send the form data to the server for admin registration here
       // You should make an HTTP POST request to your backend API endpoint
-      const response = await axios.post('http://localhost:5000/api/admin/signup', formData);
+      const response = await axios.post('https://placement-p2k8.onrender.com/api/admin/signup', formData);
       console.log('Admin registration successful:', response.data);
       setSuccessMessage('Successfully Signed Up');
       // Redirect to the admin sign-in page
