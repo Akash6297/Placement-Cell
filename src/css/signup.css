@@ -1,7 +1,7 @@
-/* src/components/Signup.css */
+/* src/components/signup.css */
 
 .signup-container {
-  width: 400px;;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -16,11 +16,12 @@ form {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 label {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -30,6 +31,7 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  width: 100%; /* Make the input fields expand to the container's width */
 }
 
 button {
@@ -40,17 +42,43 @@ button {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-
 .success-message {
-  background-color: #4caf50; /* Green background color */
-  color: white; /* White text color */
-  padding: 10px 15px; /* Padding around the message */
-  border-radius: 4px; /* Rounded corners */
-  margin-bottom: 10px; /* Add some space at the bottom of the message */
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 600px) {
+  .signup-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
 }
