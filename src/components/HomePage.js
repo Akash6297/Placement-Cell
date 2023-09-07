@@ -16,7 +16,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>
+      <h1 className='heading'>
         WELCOME TO RKMGEC PLACEMENT WEBSITE
       </h1>
       <Carousel autoPlay infiniteLoop showThumbs={false}>

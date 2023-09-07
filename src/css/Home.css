@@ -15,6 +15,31 @@
   animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
 }
 
+.heading {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #03a7ff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid transparent;
+  max-width: 100%; /* Make the text responsive */
+
+  /* Animation */
+  animation: typing 3s steps(40, end) 3s infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 
 
 h1 {
@@ -102,6 +127,9 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  .heading{
+    font-size: 15px;
+  }
   .content {
     flex-direction: column;
   }
